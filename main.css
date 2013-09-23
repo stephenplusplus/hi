@@ -71,15 +71,15 @@
 
 @-webkit-keyframes pulse {
 	0% {
-		box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+		box-shadow: 0 0 15px rgba(151, 221, 168, 0.1);
 	}
 
 	50% {
-		box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+		box-shadow: 0 0 100px rgba(151, 221, 168, 0.3);
 	}
 
 	100% {
-		box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+		box-shadow: 0 0 15px rgba(151, 221, 168, 0.1);
 	}
 }
 
@@ -104,8 +104,31 @@ h2 {
 	text-indent: 2px;
 }
 
+h3 {
+	color: #97DDA8;
+}
+
 a {
-	color: #169adb;
+	color: #7761E9;
+	transition: all 500ms;
+	-webkit-transition: all 500ms;
+	display: inline-block;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: #97DDA8;
+	text-decoration: none;
+	transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+}
+
+a:nth-of-type(odd):hover,
+a:nth-of-type(odd):active,
+a:nth-of-type(odd):focus {
+	transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
 }
 
 .container {
@@ -122,16 +145,29 @@ a {
 	font-weight: 300;
 }
 
+.about a:after {
+	content: ",";
+	color: #fff;
+}
+
+.about a:last-child:after {
+	content: ".";
+}
+
 .profile {
 	position: relative;
 }
 
 .profile .name {
-	font-size: 70px;
+	font-size: 50px;
 	font-weight: 300;
 	position: absolute;
-	top: 60px;
+	top: 80px;
 	width: 100%;
+}
+
+.profile .name:first-child {
+	top: 20px;
 }
 
 .profile .name span {
@@ -166,7 +202,7 @@ a {
 	display: inline-block;
 	position: relative;
 	z-index: 1;
-	-webkit-animation: pulse 2.2s infinite ease-in-out;
+	-webkit-animation: pulse 3.2s infinite ease-in-out;
 }
 
 .message {
