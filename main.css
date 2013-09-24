@@ -120,8 +120,8 @@ a:active,
 a:focus {
 	color: #97DDA8;
 	text-decoration: none;
-	transform: rotate(-5deg);
-	-webkit-transform: rotate(-5deg);
+	transform: rotate(-4deg);
+	-webkit-transform: rotate(-4deg);
 }
 
 a:nth-of-type(odd):hover,
@@ -164,10 +164,6 @@ a:nth-of-type(odd):focus {
 	position: absolute;
 	top: 80px;
 	width: 100%;
-}
-
-.profile .name:first-child {
-	top: 20px;
 }
 
 .profile .name span {
@@ -252,5 +248,9 @@ a:nth-of-type(odd):focus {
 
 	.about {
 		font-size: 18px;
+	}
+
+	.profile .name {
+		font-size: 30px;
 	}
 }
